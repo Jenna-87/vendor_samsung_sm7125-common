@@ -1023,6 +1023,14 @@ PRODUCT_PACKAGES += \
     manifest_android.hardware.drm@1.3-service.widevine \
     vendor.samsung.hardware.thermal@1.0-manifest
 
+PRODUCT_PACKAGES += \
+    libEGL_adreno_libEGL_adreno_symlink32 \
+    libGLESv2_adreno_libGLESv2_adreno_symlink32 \
+    libq3dtools_adreno_libq3dtools_adreno_symlink32 \
+    libEGL_adreno_libEGL_adreno_symlink64 \
+    libGLESv2_adreno_libGLESv2_adreno_symlink64 \
+    libq3dtools_adreno_libq3dtools_adreno_symlink64
+
 ifeq ($(WITH_MICROG),false)
     PRODUCT_COPY_FILES += \
         vendor/samsung/sm7125-common/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml
@@ -1032,3 +1040,4 @@ ifeq ($(WITH_MICROG),false)
         HotwordEnrollmentXGoogleEx3HEXAGON \
         com.android.hotwordenrollment.common.util
 endif
+
